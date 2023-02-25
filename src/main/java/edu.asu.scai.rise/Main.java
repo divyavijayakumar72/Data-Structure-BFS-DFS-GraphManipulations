@@ -25,5 +25,10 @@ public class Main {
         graph.removeNode("e");
         graph.removeNodes(nodeListRemoved);
         /* FEATURE 2 */
+
+        /* FEATURE 3 */
+        graph.addEdge("q", "t");
+        graph.removeEdge("q", "t");
+        /* FEATURE 3 */
     }
 }

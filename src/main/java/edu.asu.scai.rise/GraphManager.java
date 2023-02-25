@@ -190,4 +190,21 @@ public class GraphManager<String> {
     }
     /* FEATURE 2 */
 
+    /* FEATURE 3 */
+    public Map<String, List<String>> addEdge(String srcLabel, String dstLabel) {
+        addEdgeFromFile(srcLabel, dstLabel);
+        map.remove(dstLabel);
+        return map;
+    }
+
+    public Map<String, List<String>> removeEdge(String source, String destination) { // b c
+        for(String val: map.get(source)) {
+            map.remove(source);
+            addNode(source);
+            addNode(destination);
+        }
+        return map;
+    }
+    /* FEATURE 3 */
+
 }

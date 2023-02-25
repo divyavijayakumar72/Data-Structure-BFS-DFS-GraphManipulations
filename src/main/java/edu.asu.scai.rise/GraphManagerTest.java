@@ -157,4 +157,24 @@ public class GraphManagerTest {
     }
     /* FEATURE 2*/
 
+    /* FEATURE 3 */
+    @Test
+    public void testAddEdge() throws Exception {
+        g.addEdge("e", "a");
+        Assert.assertEquals(4, g.countNodes());
+        Assert.assertTrue(g.hasNode("e"));
+        Assert.assertTrue(g.containsEdge("e", "a"));
+    }
+
+    @Test
+    public void testRemoveEdge() {
+        g.removeEdge("b", "c");
+        Assert.assertEquals(4, g.countNodes());
+        Assert.assertEquals(3, g.countEdges());
+        Assert.assertTrue(g.containsEdge("a", "b"));
+        Assert.assertTrue(g.containsEdge("c", "d"));
+        Assert.assertTrue(g.containsEdge("d", "b"));
+    }
+    /* FEATURE 3 */
+
 }
