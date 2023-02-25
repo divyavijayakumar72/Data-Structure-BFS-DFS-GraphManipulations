@@ -134,12 +134,60 @@ public class GraphManager<String> {
         return newGraph;
     }
 
+    /* FEATURE 1 */
+
+    /* FEATURE 2 */
     public Map<String, List<String>> addNode(String label) {
         if(!map.containsKey(label)) {
             map.put(label, new LinkedList<String>());
         }
         return map;
     }
-    /* FEATURE 1 */
-    
+
+    public Map<String, List<String>> addNodes(String[] label) {
+        for(String val: label) {
+            if(!map.containsKey(val)) {
+                map.put(val, new LinkedList<String>());
+            }
+        }
+        return map;
+    }
+
+    public boolean hasNode(String label) {
+        if (map.containsKey(label)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public Map<String, List<String>> removeNode(String label) {
+        if(map.containsKey(label)) {
+            map.remove(label);
+        }
+
+        for(String key: map.keySet()) {
+            if(map.get(key).contains(label)) {
+                map.get(key).remove(label);
+            }
+        }
+        return map;
+    }
+
+    public Map<String, List<String>> removeNodes(String[] label) {
+        for(String val: label) {
+            if(map.containsKey(val)) {
+                map.remove(val);
+            }
+        }
+
+        for(String key: map.keySet()) {
+            if(map.get(key).contains(label)) {
+                map.get(key).remove(label);
+            }
+        }
+        return map;
+    }
+    /* FEATURE 2 */
+
 }

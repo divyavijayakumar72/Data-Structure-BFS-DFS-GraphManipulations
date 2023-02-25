@@ -17,5 +17,13 @@ public class Main {
         graph.outputGraph("output.txt");
         /* FEATURE 1 */
 
+        /* FEATURE 2 */
+        String nodeList[] = {"q", "w", "r", "t", "h", "m"};
+        String nodeListRemoved[] = {"w", "r"};
+        graph.addNode("e");
+        graph.addNodes(nodeList);
+        graph.removeNode("e");
+        graph.removeNodes(nodeListRemoved);
+        /* FEATURE 2 */
     }
 }

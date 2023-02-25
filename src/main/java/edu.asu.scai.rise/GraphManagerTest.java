@@ -111,4 +111,50 @@ public class GraphManagerTest {
    /* FEATURE 1 */
 
 
+    /* FEATURE 2 */
+    @Test
+    public void testAddNode() throws Exception {
+        g.addNode("e");
+        Assert.assertEquals(5, g.countNodes());
+        Assert.assertTrue(g.hasNode("e"));
+    }
+
+    @Test
+    public void testHasNode() throws Exception {
+        g.hasNode("v");
+        Assert.assertFalse(g.hasNode("v"));
+    }
+
+    @Test
+    public void testHasNode2() throws Exception {
+        g.hasNode("a");
+        System.out.println(g.hasNode("a"));
+        Assert.assertEquals(true, g.hasNode("a"));
+    }
+
+    @Test
+    public void testAddNodes() throws Exception {
+        String[] nodeList = {"r", "t"};
+        g.addNodes(nodeList);
+        Assert.assertEquals(6, g.countNodes());
+        Assert.assertTrue(g.hasNode("r"));
+        Assert.assertTrue(g.hasNode("t"));
+    }
+
+    @Test
+    public void testRemoveNode() throws Exception {
+        g.removeNode("a");
+        Assert.assertEquals(3, g.countNodes());
+        Assert.assertFalse(g.hasNode("a"));
+    }
+
+    @Test
+    public void testRemoveNodes() throws Exception {
+        String[] nodeList = {"a", "b"};
+        g.removeNodes(nodeList);
+        Assert.assertEquals(2, g.countNodes());
+        Assert.assertFalse(g.hasNode("a"));
+    }
+    /* FEATURE 2*/
+
 }
