@@ -3,7 +3,9 @@
 
 **INTRODUCTION:**
 
-The goal of this project is to convert a DOT file to a graph object and perform graph manipulations on it. I have created a custom graph class, **GraphManager.java** where I have used a Hashmap to represent the graph. I used **Graphviz-java** api library to convert DOT file to a graph object. I have used **Main.java** class to run the project.
+The goal of this project is to convert a DOT file to a graph object and perform graph manipulations on it. I have created a custom graph class, **GraphManager.java** where I have used a Hashmap to represent the graph. 
+
+I used **Graphviz-java** api library to convert DOT file to a graph object. I have used **Main.java** class to run the project.
 
 
 **FEATURE 1:**
