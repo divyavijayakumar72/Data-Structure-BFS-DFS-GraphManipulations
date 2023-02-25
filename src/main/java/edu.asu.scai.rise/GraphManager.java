@@ -207,4 +207,20 @@ public class GraphManager<String> {
     }
     /* FEATURE 3 */
 
+    /* FEATURE 4 */
+    public void outputDOTGraph(String path) throws IOException {
+        convertMapToGraph();
+        Graphviz.fromString(newGraph.toString()).render(Format.DOT).toFile(new File((java.lang.String) path));
+    }
+
+    public void outputGraphics(String path, String format) {
+        convertMapToGraph();
+        RenderedImage img = Graphviz.fromString(newGraph.toString()).render(Format.PNG).toImage();
+        try {
+            ImageIO.write(img, (java.lang.String) format, new File((java.lang.String) path));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

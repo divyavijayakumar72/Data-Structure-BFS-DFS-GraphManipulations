@@ -30,5 +30,10 @@ public class Main {
         graph.addEdge("q", "t");
         graph.removeEdge("q", "t");
         /* FEATURE 3 */
+
+        /* FEATURE 4 */
+        graph.outputDOTGraph("output.dot");
+        graph.outputGraphics("response.png", "png");
+        /* FEATURE 4 */
     }
 }

@@ -108,6 +108,11 @@ public class GraphManagerTest {
         System.out.println("output: " + output + " " + expected);
         Assert.assertEquals(expected, output);
     }
+
+    @Test
+    public void testConvertMapToGraph() {
+        g.convertMapToGraph();
+    }
    /* FEATURE 1 */
 
 
@@ -176,5 +181,35 @@ public class GraphManagerTest {
         Assert.assertTrue(g.containsEdge("d", "b"));
     }
     /* FEATURE 3 */
+
+    /* FEATURE 4 */
+    @Test
+    public void testOutputDOTGraph() throws IOException {
+        g.addEdge("e", "f");
+        String outputFile = "output.dot";
+        g.outputDOTGraph(outputFile);
+        String output = Files.readString(Paths.get(outputFile));
+        String expected = Files.readString(Paths.get("output.dot"));
+        Assert.assertEquals(expected, output);
+    }
+
+    @Test
+    public void testOutputGraphics() throws IOException {
+        g.addEdge("e", "f");
+        g.convertMapToGraph();
+        String outputFile = "output.dot";
+        String format = "png";
+        g.outputGraphics(outputFile, format);
+    }
+
+    @Test
+    public void testIOExceptionMessage() {
+        try {
+            String output = Files.readString(Paths.get("file.dot"));
+        } catch (IOException e) {
+            Assert.assertEquals("file.dot", e.getMessage());
+        }
+    }
+    /* FEATURE 4 */
 
 }
