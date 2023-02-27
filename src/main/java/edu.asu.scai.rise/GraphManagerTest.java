@@ -4,6 +4,10 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.awt.image.DataBuffer;
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -109,13 +113,6 @@ public class GraphManagerTest {
         Assert.assertEquals(expected, output);
     }
 
-    @Test
-    public void testConvertMapToGraph() {
-        g.convertMapToGraph();
-    }
-   /* FEATURE 1 */
-
-
     /* FEATURE 2 */
     @Test
     public void testAddNode() throws Exception {
@@ -180,9 +177,13 @@ public class GraphManagerTest {
         Assert.assertTrue(g.containsEdge("c", "d"));
         Assert.assertTrue(g.containsEdge("d", "b"));
     }
-    /* FEATURE 3 */
 
     /* FEATURE 4 */
+    @Test
+    public void testConvertMapToGraph() {
+        g.convertMapToGraph();
+    }
+
     @Test
     public void testOutputDOTGraph() throws IOException {
         g.addEdge("e", "f");
@@ -195,11 +196,19 @@ public class GraphManagerTest {
 
     @Test
     public void testOutputGraphics() throws IOException {
-        g.addEdge("e", "f");
-        g.convertMapToGraph();
-        String outputFile = "output.dot";
-        String format = "png";
-        g.outputGraphics(outputFile, format);
+        String expected = "output.png";
+        String actual = "response.png";
+        g.outputGraphics(actual, "png");
+
+        BufferedImage bImg = ImageIO.read(new File(actual));
+        DataBuffer dbf = bImg.getData().getDataBuffer();
+        int img = dbf.getSize();
+
+        BufferedImage expImg = ImageIO.read(new File(expected));
+        DataBuffer expDataBuf = expImg.getData().getDataBuffer();
+        int expImgSize = expDataBuf.getSize();
+
+        Assert.assertEquals(expImgSize, img);
     }
 
     @Test
@@ -210,6 +219,5 @@ public class GraphManagerTest {
             Assert.assertEquals("file.dot", e.getMessage());
         }
     }
-    /* FEATURE 4 */
 
 }
