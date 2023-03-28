@@ -1,2 +1,4 @@
 edu\asu\scai\rise\GraphManagerTest.class
+edu\asu\scai\rise\GraphManager.class
+edu\asu\scai\rise\Main.class
 edu\asu\scai\rise\Path.class

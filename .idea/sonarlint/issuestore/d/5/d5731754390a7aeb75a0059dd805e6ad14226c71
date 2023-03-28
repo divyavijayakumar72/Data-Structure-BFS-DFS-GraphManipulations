@@ -1,0 +1,55 @@
+
+g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(„ìûíúÿÿÿÿ8ÔÁÎÒò0
+b	java:S112v"FDefine and throw a dedicated exception instead of using a generic one.(ã©ãô8ÕÁÎÒò0
+b	java:S112}"FDefine and throw a dedicated exception instead of using a generic one.(ÕéÇš8ÕÁÎÒò0
+b	java:S112ƒ"FDefine and throw a dedicated exception instead of using a generic one.(Àå²a8ÕÁÎÒò0
+h	java:S112Š"FDefine and throw a dedicated exception instead of using a generic one.(‰ìÂËøÿÿÿÿ8ÕÁÎÒò0
+c	java:S112“"FDefine and throw a dedicated exception instead of using a generic one.(¬â›ó8ÕÁÎÒò0
+h	java:S112š"FDefine and throw a dedicated exception instead of using a generic one.(ØıĞâıÿÿÿÿ8ÕÁÎÒò0
+h	java:S112¤"FDefine and throw a dedicated exception instead of using a generic one.(À½øÿÿÿÿ8ÖÁÎÒò0
+{
+java:S2293."YReplace the type specification in this constructor call with the diamond operator ("<>").(€÷«æşÿÿÿÿ8ÖÁÎÒò0
+…
+java:S1598"âThis file "GraphManagerTest.java" should be located in "edu\asu\scai\rise" directory, not in "C:\Users\divya\OneDrive\Desktop\CSE 464\finalproj\CSE_464_2023\src\main\java\edu.asu.scai.rise"(Do not use dots in directory names).(¬ìÁóıÿÿÿÿ8ØÁÎÒò0
+V
+java:S1854K":Remove this useless assignment to local variable "actual".(ù÷°<8ïÁÎÒò0
+W
+java:S1854@":Remove this useless assignment to local variable "actual".(¡Òú–8ïÁÎÒò0
+H
+java:S1481@"+Remove this unused "actual" local variable.(¡Òú–8ïÁÎÒò0
+X	java:S125J"<This block of commented-out lines of code should be removed.(¡£æ´8ñÁÎÒò0
+X	java:S125L"<This block of commented-out lines of code should be removed.(Á¥àá8ñÁÎÒò0
+T
+java:S6126`"2Replace this String concatenation with Text block.(¯ÚÆˆúÿÿÿÿ8óÁÎÒò0
+‰
+java:S1130v"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ã©ãô8öÁÎÒò0
+]	java:S125j"<This block of commented-out lines of code should be removed.(¾ûééÿÿÿÿÿ8¶éîÒò0
+‰
+java:S1130}"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÕéÇš8öÁÎÒò0
+‰
+java:S1130ƒ"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(Àå²a8÷ÁÎÒò0
+[	java:S106…"9Replace this use of System.out or System.err by a logger.(¥¿­÷ùÿÿÿÿ8÷ÁÎÒò0
+
+java:S1130Š"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(‰ìÂËøÿÿÿÿ8øÁÎÒò0
+Š
+java:S1130“"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(¬â›ó8øÁÎÒò0
+
+java:S1130š"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ØıĞâıÿÿÿÿ8ùÁÎÒò0
+
+java:S1130¤"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(À½øÿÿÿÿ8úÁÎÒò0
+X
+java:S1854Ù":Remove this useless assignment to local variable "output".(Ö½±8€ÂÎÒò0
+^	java:S125Æ"<This block of commented-out lines of code should be removed.(€…³õûÿÿÿÿ8ÕõğÒò0
+I
+java:S1481Ù"+Remove this unused "output" local variable.(Ö½±8–½êÒò0
+O
+java:S1128"2Remove this unused import 'javax.imageio.ImageIO'.(‘çÔû8ØõğÒò0
+[
+java:S1128"9Remove this unused import 'java.awt.image.BufferedImage'.(×íĞ‡şÿÿÿÿ8ØõğÒò0
+X
+java:S1128	"6Remove this unused import 'java.awt.image.DataBuffer'.(İ²Âüÿÿÿÿ8ØõğÒò0
+F
+java:S1128
+")Remove this unused import 'java.io.File'.(†Ğ¥Å8ØõğÒò0
+H
+java:S5960"+Remove this assertion from production code.(…Ø£Î8‚ÂÎÒò0
