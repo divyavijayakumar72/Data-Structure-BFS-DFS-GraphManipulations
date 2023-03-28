@@ -36,9 +36,6 @@ public class Main {
         graph.outputGraphics("response.png", "png");
         /* FEATURE 4 */
 
-        /* PART 2- STEP 3 - BFS */
-        graph.GraphSearch("a","d");
-        /* PART 2 - STEP 3 - BFS */
 
     }
 }

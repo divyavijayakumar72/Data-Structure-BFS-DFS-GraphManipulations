@@ -100,13 +100,10 @@ public class GraphManager<String> {
         for(String key: map.keySet()) {
             if(!map.get(key).equals("[]")) {
                 for(int i=0; i<map.get(key).size();i++) {
-//                    System.out.println("getEdgeDirection " + key + " -> " + map.get(key).get(i));
                     edgeDirection.putIfAbsent(key, map.get(key).get(i));
-//                    System.out.println("Neighbors of " + key + " is " +edgeDirection.get(key));
                 }
             }
         }
-//        System.out.println("edge direction map " + edgeDirection);
         return edgeDirection;
     }
 
@@ -234,8 +231,6 @@ public class GraphManager<String> {
         }
     }
     /* FEATURE 4 */
-
-
 
 
     /* PART 2 - GET NEIGHBORS OF NODE */
