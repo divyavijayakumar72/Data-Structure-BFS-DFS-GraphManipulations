@@ -24,6 +24,8 @@ public class GraphManager<String> {
     Map<String, String> edgeDirection = new HashMap<>();
     Map<String, String> m = new HashMap<>();
 
+
+
     public void parseGraph(String filepath) throws IOException {
         mg = new Parser().read(new File((java.lang.String) filepath));
         BufferedReader reader = new BufferedReader(new FileReader((java.lang.String) filepath));
@@ -47,6 +49,7 @@ public class GraphManager<String> {
         reader.close();
     }
 
+    // From input.dot construct edges in map as k-v pairs
     public Map<String, String> addEdgeFromFile(String srcLabel, String dstLabel) {
 
         if (!map.containsKey(srcLabel)) {
@@ -64,19 +67,22 @@ public class GraphManager<String> {
                 m.put(key, map.get(key).get(i));
             }
         }
-        System.out.println("map " + m);
+//        System.out.println("m addEdgeFromFIle " + m);
         return m;
+
     }
 
     public int countNodes() {
         return map.keySet().size();
     }
 
+    // GET ALL NODES
     public ArrayList<String> getLabel() {
         ArrayList<String> arrList = new ArrayList<>();
         for(String data: map.keySet()) {
             arrList.add(data);
         }
+//        System.out.println("Nodes list " + arrList);
         return arrList;
     }
 
@@ -85,21 +91,26 @@ public class GraphManager<String> {
         for (String v : map.keySet()) {
             count += map.get(v).size();
         }
+//        System.out.println("edges count " + count);
         return count;
     }
 
+    // GET NEIGHBORS
     public Map<String, String> getEdgeDirection() {
         for(String key: map.keySet()) {
             if(!map.get(key).equals("[]")) {
                 for(int i=0; i<map.get(key).size();i++) {
-                    System.out.println(key + " -> " + map.get(key).get(i));
+//                    System.out.println("getEdgeDirection " + key + " -> " + map.get(key).get(i));
                     edgeDirection.putIfAbsent(key, map.get(key).get(i));
+//                    System.out.println("Neighbors of " + key + " is " +edgeDirection.get(key));
                 }
             }
         }
-        System.out.println("edge direction map " + edgeDirection);
+//        System.out.println("edge direction map " + edgeDirection);
         return edgeDirection;
     }
+
+
 
     public boolean containsEdge(String source, String destination) {
         if (map.get(source).contains(destination)) {
@@ -197,7 +208,7 @@ public class GraphManager<String> {
         return map;
     }
 
-    public Map<String, List<String>> removeEdge(String source, String destination) { // b c
+    public Map<String, List<String>> removeEdge(String source, String destination) {
         for(String val: map.get(source)) {
             map.remove(source);
             addNode(source);
@@ -222,5 +233,58 @@ public class GraphManager<String> {
             e.printStackTrace();
         }
     }
+    /* FEATURE 4 */
 
+
+    /* PART 2 - GET NEIGHBORS OF NODE */
+    public ArrayList<String> getNeighbors(String node) {
+        ArrayList<String> neighbors = new ArrayList<>();
+        if(map.containsKey(node) && map.get(node).size() != 0) {
+            neighbors.add((String) map.get(node).get(0));
+        } else {
+            return neighbors;
+        }
+        return neighbors;
+    }
+
+    /* PART 2 - BFS */
+    public Path GraphSearch(String src, String dst) {
+        Map<String, String> path = new HashMap<>();
+        Queue<String> queue = new LinkedList<>();
+        Set<String> visited = new HashSet<>();
+
+        queue.add(src); // Q.enqueue(root)
+        visited.add(src); // label root as explored
+
+        while (!queue.isEmpty()) { // while Q is not empty do
+            String curr = queue.poll(); // curr := Q.dequeue()
+            if (curr != null && dst != null && curr.equals(dst)) { // if curr is the destination then
+                // found the destination node, backtrack to construct the path
+                List<String> result = new ArrayList<>();
+                String node = dst;
+                while (!node.equals(src)) {
+                    result.add(node);
+                    node = path.get(node);
+                }
+                result.add(src);
+                Collections.reverse(result);
+                Path path1 = new Path((List<java.lang.String>) result);
+                System.out.println("The BFS path is " +  path1);
+                return path1;
+            }
+            // if curr is not equal to dst
+            if(getNeighbors(curr) != null) {
+                for (String neighbor : getNeighbors(curr)) {
+                    if (!visited.contains(neighbor)) {
+                        visited.add(neighbor);
+                        path.put(neighbor, curr);
+                        queue.add(neighbor);
+                    }
+                }
+            }
+        }
+        // destination node not found
+        System.out.println("No path found using BFS approach");
+        return null;
+    }
 }
