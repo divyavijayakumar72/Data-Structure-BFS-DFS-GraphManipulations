@@ -100,13 +100,10 @@ public class GraphManager<String> {
         for(String key: map.keySet()) {
             if(!map.get(key).equals("[]")) {
                 for(int i=0; i<map.get(key).size();i++) {
-//                    System.out.println("getEdgeDirection " + key + " -> " + map.get(key).get(i));
                     edgeDirection.putIfAbsent(key, map.get(key).get(i));
-//                    System.out.println("Neighbors of " + key + " is " +edgeDirection.get(key));
                 }
             }
         }
-//        System.out.println("edge direction map " + edgeDirection);
         return edgeDirection;
     }
 
@@ -236,47 +233,4 @@ public class GraphManager<String> {
     /* FEATURE 4 */
 
 
-    /* PART 2 - GET NEIGHBORS OF NODE */
-    public ArrayList<String> getNeighbors(String node) {
-        ArrayList<String> neighbors = new ArrayList<>();
-        if(map.containsKey(node) && map.get(node).size() != 0) {
-            neighbors.add((String) map.get(node).get(0));
-        } else {
-            return neighbors;
-        }
-        return neighbors;
-    }
-
-    /* PART 2 - DFS */
-    public Path GraphSearch(String src, String dest) {
-        Set<String> visited = new HashSet<>();
-        List<String> path = new ArrayList<>();
-        dfsHelper(src, dest, visited, path);
-        Path path2 = new Path((List<java.lang.String>) path);
-        if(!path2.toString().equals("")) {
-            System.out.println("The DFS path is " + path2);
-            return path2;
-        } else {
-            System.out.println("No path found using DFS approach");
-            return null;
-        }
-    }
-
-    /* PART 2 - DFS */
-    private boolean dfsHelper(String src, String dest, Set<String> visited, List<String> path) {
-        visited.add(src); // checking src node as visited
-        path.add(src); // adding source node to path
-        if (src != null && dest != null && src.equals(dest)) {
-            return true;
-        }
-        for (String adj : getNeighbors(src)) {
-            if (!visited.contains(adj)) {
-                if (dfsHelper(adj, dest, visited, path)) {
-                    return true;
-                }
-            }
-        }
-        path.remove(path.size() - 1);
-        return false;
-    }
 }

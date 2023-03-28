@@ -36,11 +36,6 @@ public class Main {
         graph.outputGraphics("response.png", "png");
         /* FEATURE 4 */
 
-        /* PART 2- STEP 4 - DFS */
-        graph.GraphSearch("b","d");
-        /* PART 2 - STEP 4 - DFS */
-
-
 
     }
 }
