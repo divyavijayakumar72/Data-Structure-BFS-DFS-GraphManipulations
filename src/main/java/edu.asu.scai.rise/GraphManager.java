@@ -233,8 +233,6 @@ public class GraphManager<String> {
     }
     /* FEATURE 3 */
 
-
-
     /* PART 2 - GET NEIGHBORS OF NODE */
     public ArrayList<String> getNeighbors(String node) {
         ArrayList<String> neighbors = new ArrayList<>();
