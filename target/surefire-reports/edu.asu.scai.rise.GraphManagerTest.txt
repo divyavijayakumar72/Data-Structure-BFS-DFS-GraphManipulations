@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: edu.asu.scai.rise.GraphManagerTest
 -------------------------------------------------------------------------------
-Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.225 sec
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.163 sec

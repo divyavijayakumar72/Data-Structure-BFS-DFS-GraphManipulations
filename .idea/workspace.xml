@@ -8,13 +8,19 @@
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output.dot" beforeDir="false" afterPath="$PROJECT_DIR$/output.dot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/response.png" beforeDir="false" afterPath="$PROJECT_DIR$/response.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/Algorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/Algorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/GraphManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/GraphManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/GraphManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/GraphManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/asu/scai/rise/GraphManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/asu/scai/rise/GraphManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/asu/scai/rise/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/asu/scai/rise/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.asu.scai.rise.GraphManagerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.asu.scai.rise.GraphManagerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/edu.asu.scai.rise.GraphManagerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/edu.asu.scai.rise.GraphManagerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/asu/scai/rise/GraphManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/edu/asu/scai/rise/GraphManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/asu/scai/rise/GraphManagerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/edu/asu/scai/rise/GraphManagerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/asu/scai/rise/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/edu/asu/scai/rise/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
