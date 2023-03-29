@@ -233,8 +233,6 @@ public class GraphManager<String> {
     }
     /* FEATURE 3 */
 
-
-
     /* PART 2 - GET NEIGHBORS OF NODE */
     public ArrayList<String> getNeighbors(String node) {
         ArrayList<String> neighbors = new ArrayList<>();
@@ -265,7 +263,7 @@ public class GraphManager<String> {
     /* FEATURE 4 */
 
 
-    /* PART 2 - BFS */
+    /* PART 2 - BFS & DFS combined*/
     public Path GraphSearch(String src, String dst, int value) {
         if (value == 0) {
             Map<String, String> path = new HashMap<>();

@@ -36,6 +36,7 @@ public class Main {
         graph.outputGraphics("response.png", "png");
         /* FEATURE 4 */
 
+        /*Merge conflict resolved*/
         System.out.println("Algorithm.BFS.ordinal(): " + Algorithm.BFS.ordinal());
         graph.GraphSearch("a","d", Algorithm.BFS.ordinal());
 
