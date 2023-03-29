@@ -102,16 +102,16 @@ public class GraphManagerTest {
         Assert.assertEquals(expectedGraph, g.toString());
     }
 
-//    @Test
-//    public void testOutputGraph() throws IOException {
-//        String outputFile = "output.txt";
-//        g.outputGraph(outputFile);
-//        String output = Files.readString(Paths.get(outputFile));
-////        String expected = Files.readString(Paths.get(outputFile));
-//        String expected = Files.readString(Paths.get(outputFile));
-//        System.out.println(" expected " + expected);
-//        Assert.assertEquals("a -> b", "a -> b");
-//    }
+    @Test
+    public void testOutputGraph() throws IOException {
+        String outputFile = "output.dot";
+        g.outputGraph(outputFile);
+        String output = Files.readString(Paths.get(outputFile));
+
+        String expected = Files.readString(Paths.get("output.txt"));
+        System.out.println("output: " + output + " " + expected);
+        Assert.assertEquals(expected, output);
+    }
 
     /* FEATURE 2 */
     @Test
@@ -194,22 +194,22 @@ public class GraphManagerTest {
         Assert.assertEquals(expected, output);
     }
 
-//    @Test
-//    public void testOutputGraphics() throws IOException {
-//        String expected = "output.png";
-//        String actual = "response.png";
-//        g.outputGraphics(actual, "png");
-//
-//        BufferedImage bImg = ImageIO.read(new File(actual));
-//        DataBuffer dbf = bImg.getData().getDataBuffer();
-//        int img = dbf.getSize();
-//
-//        BufferedImage expImg = ImageIO.read(new File(expected));
-//        DataBuffer expDataBuf = expImg.getData().getDataBuffer();
-//        int expImgSize = expDataBuf.getSize();
-//
-//        Assert.assertEquals(expImgSize, img);
-//    }
+    @Test
+    public void testOutputGraphics() throws IOException {
+        String expected = "output.png";
+        String actual = "response.png";
+        g.outputGraphics(actual, "png");
+
+        BufferedImage bImg = ImageIO.read(new File(actual));
+        DataBuffer dbf = bImg.getData().getDataBuffer();
+        int img = dbf.getSize();
+
+        BufferedImage expImg = ImageIO.read(new File(expected));
+        DataBuffer expDataBuf = expImg.getData().getDataBuffer();
+        int expImgSize = expDataBuf.getSize();
+
+        Assert.assertEquals(expImgSize, img);
+    }
 
     @Test
     public void testIOExceptionMessage() {

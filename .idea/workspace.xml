@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fc57f38-5730-47bc-a382-3bc5833b2e5a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output.dot" beforeDir="false" afterPath="$PROJECT_DIR$/output.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/GraphManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/GraphManagerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/CSE464-SQTesting-Part1-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/CSE464-SQTesting-Part1-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
@@ -32,7 +36,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/divya/OneDrive/Desktop/CSE 464/updated_464/Divya_Vijayakumar_Assignment1-1"
+    "last_opened_file_path": "C:/Users/divya/OneDrive/Desktop/CSE 464/finalproj/CSE_464_2023"
   }
 }]]></component>
   <component name="RunAnythingCache">

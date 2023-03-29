@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="19" failures="0" name="edu.asu.scai.rise.GraphManagerTest" time="0.089" errors="0" skipped="0">
+<testsuite tests="19" failures="0" name="edu.asu.scai.rise.GraphManagerTest" time="0.155" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2022.3.1"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -65,23 +65,23 @@
     <property name="sun.stdout.encoding" value="UTF-8"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testCountEdges" time="0.033"/>
+  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testCountEdges" time="0.057"/>
   <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testCountNodes" time="0"/>
-  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testParseGraph" time="0.001"/>
-  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testOutputDOTGraph" time="0.035"/>
-  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testGetLabel" time="0.002"/>
-  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testAddEdge" time="0.002"/>
-  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testAddNode" time="0.001"/>
+  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testParseGraph" time="0.002"/>
+  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testOutputDOTGraph" time="0.056"/>
+  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testGetLabel" time="0.003"/>
+  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testAddEdge" time="0.003"/>
+  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testAddNode" time="0.002"/>
   <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testContainsEdge" time="0.002"/>
-  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testToString" time="0.003"/>
+  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testToString" time="0.007"/>
   <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testRemoveNodes" time="0.002"/>
-  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testAddNodes" time="0"/>
-  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testContainsEdge2" time="0"/>
-  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testIOExceptionMessage" time="0.001"/>
-  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testHasNode" time="0.002"/>
+  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testAddNodes" time="0.004"/>
+  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testContainsEdge2" time="0.001"/>
+  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testIOExceptionMessage" time="0.002"/>
+  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testHasNode" time="0.003"/>
   <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testRemoveEdge" time="0.001"/>
-  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testRemoveNode" time="0"/>
-  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testGetEdgeDirection" time="0.002"/>
-  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testHasNode2" time="0"/>
-  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testConvertMapToGraph" time="0.002"/>
+  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testRemoveNode" time="0.002"/>
+  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testGetEdgeDirection" time="0.001"/>
+  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testHasNode2" time="0.002"/>
+  <testcase classname="edu.asu.scai.rise.GraphManagerTest" name="testConvertMapToGraph" time="0.005"/>
 </testsuite>
