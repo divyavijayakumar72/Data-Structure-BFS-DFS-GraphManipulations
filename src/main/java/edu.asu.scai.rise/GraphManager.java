@@ -263,7 +263,7 @@ public class GraphManager<String> {
     /* FEATURE 4 */
 
 
-    /* PART 2 - BFS */
+    /* PART 2 - BFS & DFS combined*/
     public Path GraphSearch(String src, String dst, int value) {
         if (value == 0) {
             Map<String, String> path = new HashMap<>();
