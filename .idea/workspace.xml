@@ -38,12 +38,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
+    &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/divya/OneDrive/Desktop/CSE 464/finalproj/CSE_464_2023&quot;
-  }
-}</component>
+    }
+    }</component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn package" />

@@ -234,23 +234,6 @@ public class GraphManager<String> {
     /* FEATURE 3 */
 
 
-//    /* PART 2 - DFS */
-//    public Path GraphSearch(String src, String dest) {
-//
-//        Set<String> visited = new HashSet<>();
-//        List<String> path = new ArrayList<>();
-//        dfsHelper(src, dest, visited, path);
-//        Path path2 = new Path((List<java.lang.String>) path);
-//        if(!path2.toString().equals("")) {
-//            System.out.println("The DFS path is " + path2);
-//            return path2;
-//        } else {
-//            System.out.println("No path found using DFS approach");
-//            return null;
-//        }
-//    }
-//    /* PART 2 - DFS */
-
 
     /* PART 2 - GET NEIGHBORS OF NODE */
     public ArrayList<String> getNeighbors(String node) {

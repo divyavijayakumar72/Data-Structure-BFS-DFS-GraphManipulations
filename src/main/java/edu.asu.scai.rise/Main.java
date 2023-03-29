@@ -36,10 +36,10 @@ public class Main {
         graph.outputGraphics("response.png", "png");
         /* FEATURE 4 */
 
-        System.out.println("Algorithm.BFS.ordinal() " + Algorithm.BFS.ordinal());
+        System.out.println("Algorithm.BFS.ordinal(): " + Algorithm.BFS.ordinal());
         graph.GraphSearch("a","d", Algorithm.BFS.ordinal());
 
-        System.out.println("Algorithm.BFS.ordinal() " + Algorithm.DFS.ordinal());
+        System.out.println("Algorithm.BFS.ordinal(): " + Algorithm.DFS.ordinal());
         graph.GraphSearch("b", "d", Algorithm.DFS.ordinal());
 
     }
