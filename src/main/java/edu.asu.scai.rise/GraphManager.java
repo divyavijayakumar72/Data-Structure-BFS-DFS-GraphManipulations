@@ -252,6 +252,7 @@ public class GraphManager<String> {
             return null;
         }
     }
+    /* PART 2 - DFS */
 
 
     /* PART 2 - GET NEIGHBORS OF NODE */
@@ -264,6 +265,7 @@ public class GraphManager<String> {
         }
         return neighbors;
     }
+    /* PART 2 - GET NEIGHBORS OF NODE */
 
     /* FEATURE 4 */
     public void outputDOTGraph(String path) throws IOException {
