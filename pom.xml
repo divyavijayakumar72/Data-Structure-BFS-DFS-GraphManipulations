@@ -26,4 +26,8 @@
     </dependency>
   </dependencies>
 
+  <build>
+    <testSourceDirectory>${project.basedir}/src/main/java/edu.asu.scai.rise</testSourceDirectory>
+  </build>
+
 </project>

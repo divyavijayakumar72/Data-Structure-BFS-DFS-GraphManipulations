@@ -36,11 +36,11 @@ public class Main {
         graph.outputGraphics("response.png", "png");
         /* FEATURE 4 */
 
-        /* PART 2- STEP 4 b added- DFS */
-        graph.GraphSearch("b","d"); //added
-        /* PART 2 - STEP 4 b added- DFS */
+        System.out.println("Algorithm.BFS.ordinal() " + Algorithm.BFS.ordinal());
+        graph.GraphSearch("a","d", Algorithm.BFS.ordinal());
 
-
+        System.out.println("Algorithm.BFS.ordinal() " + Algorithm.DFS.ordinal());
+        graph.GraphSearch("b", "d", Algorithm.DFS.ordinal());
 
     }
 }

@@ -100,13 +100,10 @@ public class GraphManager<String> {
         for(String key: map.keySet()) {
             if(!map.get(key).equals("[]")) {
                 for(int i=0; i<map.get(key).size();i++) {
-//                    System.out.println("getEdgeDirection " + key + " -> " + map.get(key).get(i));
                     edgeDirection.putIfAbsent(key, map.get(key).get(i));
-//                    System.out.println("Neighbors of " + key + " is " +edgeDirection.get(key));
                 }
             }
         }
-//        System.out.println("edge direction map " + edgeDirection);
         return edgeDirection;
     }
 
@@ -237,22 +234,22 @@ public class GraphManager<String> {
     /* FEATURE 3 */
 
 
-    /* PART 2 - DFS */
-    public Path GraphSearch(String src, String dest) {
-
-        Set<String> visited = new HashSet<>();
-        List<String> path = new ArrayList<>();
-        dfsHelper(src, dest, visited, path);
-        Path path2 = new Path((List<java.lang.String>) path);
-        if(!path2.toString().equals("")) {
-            System.out.println("The DFS path is " + path2);
-            return path2;
-        } else {
-            System.out.println("No path found using DFS approach");
-            return null;
-        }
-    }
-    /* PART 2 - DFS */
+//    /* PART 2 - DFS */
+//    public Path GraphSearch(String src, String dest) {
+//
+//        Set<String> visited = new HashSet<>();
+//        List<String> path = new ArrayList<>();
+//        dfsHelper(src, dest, visited, path);
+//        Path path2 = new Path((List<java.lang.String>) path);
+//        if(!path2.toString().equals("")) {
+//            System.out.println("The DFS path is " + path2);
+//            return path2;
+//        } else {
+//            System.out.println("No path found using DFS approach");
+//            return null;
+//        }
+//    }
+//    /* PART 2 - DFS */
 
 
     /* PART 2 - GET NEIGHBORS OF NODE */
@@ -285,6 +282,64 @@ public class GraphManager<String> {
     /* FEATURE 4 */
 
 
+    /* PART 2 - BFS */
+    public Path GraphSearch(String src, String dst, int value) {
+        if (value == 0) {
+            Map<String, String> path = new HashMap<>();
+            Queue<String> queue = new LinkedList<>();
+            Set<String> visited = new HashSet<>();
 
+            queue.add(src); // Q.enqueue(root)
+            visited.add(src); // label root as explored
 
+            while (!queue.isEmpty()) { // while Q is not empty do
+                String curr = queue.poll(); // curr := Q.dequeue()
+                if (curr != null && dst != null && curr.equals(dst)) { // if curr is the destination then
+
+                    // found the destination node, backtrack to construct the path
+                    List<String> result = new ArrayList<>();
+                    String node = dst;
+                    while (!node.equals(src)) {
+                        result.add(node);
+                        node = path.get(node);
+                    }
+                    result.add(src);
+                    Collections.reverse(result);
+                    Path path1 = new Path((List<java.lang.String>) result);
+                    System.out.println("The BFS path is " +  path1);
+                    return path1;
+                }
+                // if curr is not equal to dst
+                if(getNeighbors(curr) != null) {
+                    for (String neighbor : getNeighbors(curr)) {
+                        if (!visited.contains(neighbor)) {
+                            visited.add(neighbor);
+                            path.put(neighbor, curr);
+                            queue.add(neighbor);
+                        }
+                    }
+                }
+            }
+            // destination node not found
+            System.out.println("No path found using BFS approach");
+            return null;
+        } else if (value == 1){
+            /* PART 2 - DFS */
+            Set<String> visited = new HashSet<>();
+            List<String> path = new ArrayList<>();
+            dfsHelper(src, dst, visited, path);
+            Path path2 = new Path((List<java.lang.String>) path);
+
+            if(!path2.toString().equals("")) {
+                System.out.println("The DFS path is " + path2);
+                return path2;
+            } else {
+                System.out.println("No path found using DFS approach");
+                return null;
+            }
+
+        } else {
+            return null;
+        }
+    }
 }
