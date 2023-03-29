@@ -37,7 +37,7 @@ public class Main {
         /* FEATURE 4 */
 
 
-        /*Merge conflict resolved*/
+        /*Merge conflict resolved check in again*/
         System.out.println("Algorithm.BFS.ordinal(): " + Algorithm.BFS.ordinal());
         graph.GraphSearch("a","d", Algorithm.BFS.ordinal());
 

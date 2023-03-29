@@ -169,7 +169,7 @@ public class GraphManager<String> {
         }
     }
 
-    /* PART 2 - DFS */
+    /* PART 2 - DFS helper method*/
     private boolean dfsHelper(String src, String dest, Set<String> visited, List<String> path) {
         visited.add(src); // checking src node as visited
         path.add(src); // adding source node to path

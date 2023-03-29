@@ -10,7 +10,6 @@
       <change beforePath="$PROJECT_DIR$/output.dot" beforeDir="false" afterPath="$PROJECT_DIR$/output.dot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/Algorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/Algorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/GraphManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/GraphManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
