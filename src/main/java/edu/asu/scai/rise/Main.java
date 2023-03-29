@@ -38,7 +38,7 @@ public class Main {
 
         /* PART 2- STEP 3 a - BFS */
         graph.GraphSearch("a","d");
-        /* PART 2 - STEP 3 a - BFS */
+        /* PART 2 - STEP 3 a new - BFS */
 
     }
 }
