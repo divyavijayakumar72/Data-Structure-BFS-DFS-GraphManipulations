@@ -2,6 +2,7 @@ package edu.asu.scai.rise;
 
 import guru.nidi.graphviz.engine.Format;
 import guru.nidi.graphviz.engine.Graphviz;
+import guru.nidi.graphviz.engine.Renderer;
 import guru.nidi.graphviz.model.MutableGraph;
 import guru.nidi.graphviz.parse.Parser;
 
@@ -52,6 +53,11 @@ public class GraphManager<String> {
     // REFACTOR 1: adding method "addKeyValue" to improve code re-usability
     public void addKeyValue(Map map, String key, String value) {
         map.put(key, value);
+    }
+
+    // REFACTOR 2: adding method "createGraph" to improve code re-usability and readability
+    public Renderer createRenderer(MutableGraph graph, Format format) {
+        return Graphviz.fromString(graph.toString()).render(format);
     }
 
     // From input.dot construct edges in map as k-v pairs
@@ -130,7 +136,8 @@ public class GraphManager<String> {
 
     public void outputGraph(String filepath) throws IOException {
         convertMapToGraph();
-        Graphviz.fromString((java.lang.String) newGraph.toString()).render(Format.DOT).toFile(new File((java.lang.String) filepath));
+        // REFACTOR 2: using method in place of whole line of code for better readability and code re-usability
+        createRenderer(newGraph, Format.DOT).toFile(new File((java.lang.String) filepath));
     }
 
     public MutableGraph convertMapToGraph() {
@@ -253,12 +260,15 @@ public class GraphManager<String> {
     /* FEATURE 4 */
     public void outputDOTGraph(String path) throws IOException {
         convertMapToGraph();
-        Graphviz.fromString(newGraph.toString()).render(Format.DOT).toFile(new File((java.lang.String) path));
+        // REFACTOR 2: using method in place of whole line of code for better readability and code re-usability
+        createRenderer(newGraph, Format.DOT).toFile(new File((java.lang.String) path));
     }
 
     public void outputGraphics(String path, String format) {
         convertMapToGraph();
-        RenderedImage img = Graphviz.fromString(newGraph.toString()).render(Format.PNG).toImage();
+        // REFACTOR 2: using method in place of whole line of code for better readability and code re-usability
+        RenderedImage img = createRenderer(newGraph, Format.PNG).toImage();
+
         try {
             ImageIO.write(img, (java.lang.String) format, new File((java.lang.String) path));
         } catch (IOException e) {

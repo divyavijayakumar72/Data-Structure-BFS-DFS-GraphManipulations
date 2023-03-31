@@ -7,8 +7,6 @@
     <list default="true" id="8fc57f38-5730-47bc-a382-3bc5833b2e5a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.dot" beforeDir="false" afterPath="$PROJECT_DIR$/output.dot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/response.png" beforeDir="false" afterPath="$PROJECT_DIR$/response.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/Algorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/Algorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/GraphManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/GraphManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
