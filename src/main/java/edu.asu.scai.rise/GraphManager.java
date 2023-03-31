@@ -49,6 +49,11 @@ public class GraphManager<String> {
         reader.close();
     }
 
+    // REFACTOR 1: adding method "addKeyValue" to improve code re-usability
+    public void addKeyValue(Map map, String key, String value) {
+        map.put(key, value);
+    }
+
     // From input.dot construct edges in map as k-v pairs
     public Map<String, String> addEdgeFromFile(String srcLabel, String dstLabel) {
 
@@ -64,7 +69,7 @@ public class GraphManager<String> {
 
         for(String key: map.keySet()) {
             for(int i=0; i<map.get(key).size();i++) {
-                m.put(key, map.get(key).get(i));
+                addKeyValue(m, key, map.get(key).get(i));
             }
         }
 //        System.out.println("m addEdgeFromFIle " + m);
@@ -295,7 +300,7 @@ public class GraphManager<String> {
                     for (String neighbor : getNeighbors(curr)) {
                         if (!visited.contains(neighbor)) {
                             visited.add(neighbor);
-                            path.put(neighbor, curr);
+                            addKeyValue(path, neighbor, curr);
                             queue.add(neighbor);
                         }
                     }
