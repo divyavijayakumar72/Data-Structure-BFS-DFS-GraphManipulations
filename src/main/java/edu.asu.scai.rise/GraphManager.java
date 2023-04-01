@@ -73,12 +73,13 @@ public class GraphManager<String> {
 
         map.get(srcLabel).add(dstLabel);
 
+        /* REFACTOR 3: change from for loop to foreach loop (line 78) to improve performance and simplicity of code */
         for(String key: map.keySet()) {
-            for(int i=0; i<map.get(key).size();i++) {
-                addKeyValue(m, key, map.get(key).get(i));
+            for (String value : map.get(key)) {
+                addKeyValue(m, key, value);
             }
         }
-//        System.out.println("m addEdgeFromFIle " + m);
+
         return m;
 
     }
@@ -108,13 +109,15 @@ public class GraphManager<String> {
 
     // GET NEIGHBORS
     public Map<String, String> getEdgeDirection() {
+        /* REFACTOR 3: change from for loop to foreach loop (line 115) to improve performance and simplicity of code */
         for(String key: map.keySet()) {
             if(!map.get(key).equals("[]")) {
-                for(int i=0; i<map.get(key).size();i++) {
-                    edgeDirection.putIfAbsent(key, map.get(key).get(i));
+                for(String value : map.get(key)) {
+                    edgeDirection.putIfAbsent(key, value);
                 }
             }
         }
+
         return edgeDirection;
     }
 
