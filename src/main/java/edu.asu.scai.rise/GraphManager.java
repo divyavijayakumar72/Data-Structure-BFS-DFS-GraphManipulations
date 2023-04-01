@@ -124,11 +124,8 @@ public class GraphManager<String> {
 
 
     public boolean containsEdge(String source, String destination) {
-        if (map.get(source).contains(destination)) {
-            return true;
-        } else {
-            return false;
-        }
+        /* REFACTOR 4: rewriting if-else as a ternary operator to reduce lines of code */
+        return map.get(source).contains(destination) ? true : false;
     }
 
     public java.lang.String toString() {
@@ -177,11 +174,8 @@ public class GraphManager<String> {
     }
 
     public boolean hasNode(String label) {
-        if (map.containsKey(label)) {
-            return true;
-        } else {
-            return false;
-        }
+        /* REFACTOR 4: rewriting if-else as a ternary operator to reduce lines of code */
+        return map.containsKey(label) ? true : false;
     }
 
     /* PART 2 - DFS helper method*/
