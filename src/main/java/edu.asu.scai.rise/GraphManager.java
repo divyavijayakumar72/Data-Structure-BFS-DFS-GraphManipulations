@@ -62,14 +62,9 @@ public class GraphManager<String> {
 
     // From input.dot construct edges in map as k-v pairs
     public Map<String, String> addEdgeFromFile(String srcLabel, String dstLabel) {
-
-        if (!map.containsKey(srcLabel)) {
+        /* REFACTOR 5: Removing and/or combining 2 if-conditions to reduce lines of code */
             addNode(srcLabel);
-        }
-
-        if (!map.containsKey(dstLabel)) {
             addNode(dstLabel);
-        }
 
         map.get(srcLabel).add(dstLabel);
 
@@ -186,11 +181,10 @@ public class GraphManager<String> {
             return true;
         }
         for (String adj : getNeighbors(src)) {
-            if (!visited.contains(adj)) {
-                if (dfsHelper(adj, dest, visited, path)) {
+            /* REFACTOR 5: Removing and/or combining 2 if-conditions to reduce lines of code */
+                if (!visited.contains(adj) && dfsHelper(adj, dest, visited, path)) {
                     return true;
                 }
-            }
         }
         path.remove(path.size() - 1);
         return false;
