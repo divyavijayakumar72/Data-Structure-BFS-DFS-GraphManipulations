@@ -21,7 +21,7 @@ public class GraphManager<String> {
     MutableGraph mg;
     MutableGraph newGraph;
 
-    private Map<String, List<String>> map = new HashMap<>();
+    Map<String, List<String>> map = new HashMap<>(); // removing private
     Map<String, String> edgeDirection = new HashMap<>();
     Map<String, String> m = new HashMap<>();
 
@@ -274,14 +274,14 @@ public class GraphManager<String> {
         if (value == 0) {
             Map<String, String> path = new HashMap<>();
             Queue<String> queue = new LinkedList<>();
-            Set<String> visited = new HashSet<>();
+            Set<String> visited = new HashSet<>(); // COMMON
 
             queue.add(src); // Q.enqueue(root)
-            visited.add(src); // label root as explored
+            visited.add(src); // label root as explored - COMMON
 
             while (!queue.isEmpty()) { // while Q is not empty do
                 String curr = queue.poll(); // curr := Q.dequeue()
-                if (curr != null && dst != null && curr.equals(dst)) { // if curr is the destination then
+                if (curr != null && dst != null && curr.equals(dst)) { // if curr is the destination then - COMMON
 
                     // found the destination node, backtrack to construct the path
                     List<String> result = new ArrayList<>();
@@ -292,13 +292,13 @@ public class GraphManager<String> {
                     }
                     result.add(src);
                     Collections.reverse(result);
-                    Path path1 = new Path((List<java.lang.String>) result);
+                    Path path1 = new Path((List<java.lang.String>) result); //COMMON
                     System.out.println("The BFS path is " +  path1);
                     return path1;
                 }
                 // if curr is not equal to dst
                 if(getNeighbors(curr) != null) {
-                    for (String neighbor : getNeighbors(curr)) {
+                    for (String neighbor : getNeighbors(curr)) { // COMMON
                         if (!visited.contains(neighbor)) {
                             visited.add(neighbor);
                             addKeyValue(path, neighbor, curr);

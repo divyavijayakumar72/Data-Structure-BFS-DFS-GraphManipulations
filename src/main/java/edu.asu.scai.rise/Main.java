@@ -1,6 +1,12 @@
 package edu.asu.scai.rise;
 
+import com.kitfox.svg.A;
+
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Queue;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -38,11 +44,20 @@ public class Main {
 
 
         /*Merge conflict resolved check in again*/
-        System.out.println("Algorithm.BFS.ordinal(): " + Algorithm.BFS.ordinal());
-        graph.GraphSearch("a","d", Algorithm.BFS.ordinal());
+//        System.out.println("Algorithm.BFS.ordinal(): " + Algorithm.BFS.ordinal());
+//        graph.GraphSearch("a","d", Algorithm.BFS.ordinal());
+//
+//        System.out.println("Algorithm.BFS.ordinal() : " + Algorithm.DFS.ordinal());
+//        graph.GraphSearch("b", "d", Algorithm.DFS.ordinal());
 
-        System.out.println("Algorithm.BFS.ordinal() : " + Algorithm.DFS.ordinal());
-        graph.GraphSearch("b", "d", Algorithm.DFS.ordinal());
+
+        /* PROJECT PART 3 */
+
+        GraphTemplatePattern bfs = new BFS();
+        bfs.traverse(graph.map, "a", "d");
+
+        GraphTemplatePattern dfs = new DFS();
+        dfs.traverse(graph.map, "b", "d");
 
     }
 }
