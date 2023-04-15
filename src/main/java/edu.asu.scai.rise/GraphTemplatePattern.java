@@ -25,7 +25,7 @@ public abstract class GraphTemplatePattern {
             result.add(source);
             Collections.reverse(result);
             Path path1 = new Path((List<java.lang.String>) result);
-            System.out.println("The path is " +  path1);
+            System.out.println("The path using Template Pattern is " +  path1);
             return path1;
         }
         return null;
@@ -36,7 +36,9 @@ public abstract class GraphTemplatePattern {
     protected ArrayList<String> getNeighbors(Map<String, List<String>> map, String node) {
         ArrayList<String> neighbors = new ArrayList<>();
         if(map.containsKey(node) && map.get(node).size() != 0) {
-            neighbors.add((String) map.get(node).get(0));
+            for(int i=0;i<map.get(node).size();i++) {
+                neighbors.add(map.get(node).get(i));
+            }
         }
         return neighbors;
     }

@@ -54,6 +54,7 @@ public class GraphManagerTest {
     @Test
     public void testCountEdges() {
         g.countEdges();
+        System.out.println("g.countEdges() " + g.countEdges());
         Assert.assertEquals(4, g.countEdges());
     }
 

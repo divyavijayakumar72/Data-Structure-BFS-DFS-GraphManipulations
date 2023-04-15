@@ -24,11 +24,11 @@ public class Main {
         /* FEATURE 1 */
 
         /* FEATURE 2 */
-        String nodeList[] = {"q", "w", "r", "t", "h", "m"};
+        String nodeList[] = {"q", "w", "r", "t", "i", "m"};
         String nodeListRemoved[] = {"w", "r"};
-        graph.addNode("e");
+        graph.addNode("x");
         graph.addNodes(nodeList);
-        graph.removeNode("e");
+        graph.removeNode("x");
         graph.removeNodes(nodeListRemoved);
         /* FEATURE 2 */
 
@@ -40,15 +40,13 @@ public class Main {
         /* FEATURE 4 */
         graph.outputDOTGraph("output.dot");
         graph.outputGraphics("response.png", "png");
-        /* FEATURE 4 */
+       /* FEATURE 4 */
 
 
         /*Merge conflict resolved check in again*/
-//        System.out.println("Algorithm.BFS.ordinal(): " + Algorithm.BFS.ordinal());
-//        graph.GraphSearch("a","d", Algorithm.BFS.ordinal());
-        
-//        System.out.println("Algorithm.BFS.ordinal() : " + Algorithm.DFS.ordinal());
-//        graph.GraphSearch("b", "d", Algorithm.DFS.ordinal());
+        graph.GraphSearch("a","d", Algorithm.BFS.ordinal());
+
+        graph.GraphSearch("b", "d", Algorithm.DFS.ordinal());
 
 
         /* PROJECT PART 3 */

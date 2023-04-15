@@ -3,8 +3,6 @@ package edu.asu.scai.rise;
 import java.util.*;
 
 public class BFSStrategy implements SearchAlgorithm {
-
-//    GraphManager<String> graph = new GraphManager<>();
     @Override
     public Path search(String src, String dst, Map<String, List<String>> map) {
 
@@ -17,7 +15,6 @@ public class BFSStrategy implements SearchAlgorithm {
 
         while (!queue.isEmpty()) { // while Q is not empty do
             String curr = queue.poll(); // curr := Q.dequeue()
-//            System.out.println("curr " + curr);
             if (curr != null && dst != null && curr.equals(dst)) { // if curr is the destination then - COMMON
 
                 // found the destination node, backtrack to construct the path
@@ -30,11 +27,10 @@ public class BFSStrategy implements SearchAlgorithm {
                 result.add(src);
                 Collections.reverse(result);
                 Path path1 = new Path((List<String>) result); //COMMON
-                System.out.println("The BFS path is " +  path1);
+                System.out.println("The BFS path using Strategy pattern is " +  path1);
                 return path1;
             }
             ArrayList<String> neighbors = getNeighbors(map, curr);
-//            System.out.println("neighbors " + neighbors);
             // if curr is not equal to dst
                 for (String neighbor : neighbors) {
                     if (!visited.contains(neighbor)) {
@@ -50,9 +46,12 @@ public class BFSStrategy implements SearchAlgorithm {
     private ArrayList<String> getNeighbors(Map<String, List<String>> map, String node) {
         ArrayList<String> neighbors = new ArrayList<>();
         if(map.containsKey(node) && map.get(node).size() != 0) {
-            neighbors.add((String) map.get(node).get(0));
+            for(int i=0;i<map.get(node).size();i++) {
+                neighbors.add(map.get(node).get(i));
+            }
         }
         return neighbors;
     }
+
 
 }

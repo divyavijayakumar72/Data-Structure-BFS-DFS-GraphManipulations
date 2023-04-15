@@ -61,12 +61,17 @@ public class GraphManager<String> {
     }
 
     // From input.dot construct edges in map as k-v pairs
-    public Map<String, String> addEdgeFromFile(String srcLabel, String dstLabel) {
+    public Map<java.lang.String, List<java.lang.String>> addEdgeFromFile(String srcLabel, String dstLabel) {
         /* REFACTOR 5: Removing and/or combining 2 if-conditions to reduce lines of code */
             addNode(srcLabel);
             addNode(dstLabel);
-
-        map.get(srcLabel).add((java.lang.String) dstLabel);
+            List<String> values = (List<String>) map.get(srcLabel);
+            if (values == null) { // if initial node has no value list
+                values = new ArrayList<>();
+                map.put((java.lang.String) srcLabel, (List<java.lang.String>) values);
+            }
+            // if srclabel key already has value list
+             values.add(dstLabel);
 
         /* REFACTOR 3: change from for loop to foreach loop (line 78) to improve performance and simplicity of code */
         for(java.lang.String key: map.keySet()) {
@@ -74,8 +79,7 @@ public class GraphManager<String> {
                 addKeyValue((Map) m, (String) key, (String) value);
             }
         }
-
-        return m;
+        return map;
 
     }
 
@@ -89,7 +93,6 @@ public class GraphManager<String> {
         for(java.lang.String data: map.keySet()) {
             arrList.add((String) data);
         }
-//        System.out.println("Nodes list " + arrList);
         return arrList;
     }
 
@@ -98,7 +101,6 @@ public class GraphManager<String> {
         for (java.lang.String v : map.keySet()) {
             count += map.get(v).size();
         }
-//        System.out.println("edges count " + count);
         return count;
     }
 
@@ -240,7 +242,9 @@ public class GraphManager<String> {
     public ArrayList<String> getNeighbors(String node) {
         ArrayList<String> neighbors = new ArrayList<>();
         if(map.containsKey(node) && map.get(node).size() != 0) {
-            neighbors.add((String) map.get(node).get(0));
+            for(int i=0;i<map.get(node).size();i++) {
+                neighbors.add((String) map.get(node).get(i));
+            }
         } else {
             return neighbors;
         }
@@ -270,7 +274,7 @@ public class GraphManager<String> {
 
 
     /* PART 2 - BFS & DFS combined*/
-    /* public Path GraphSearch(String src, String dst, int value) {
+     public Path GraphSearch(String src, String dst, int value) {
         if (value == 0) {
             Map<String, String> path = new HashMap<>();
             Queue<String> queue = new LinkedList<>();
@@ -278,7 +282,6 @@ public class GraphManager<String> {
 
             queue.add(src); // Q.enqueue(root)
             visited.add(src); // label root as explored - COMMON
-
             while (!queue.isEmpty()) { // while Q is not empty do
                 String curr = queue.poll(); // curr := Q.dequeue()
                 if (curr != null && dst != null && curr.equals(dst)) { // if curr is the destination then - COMMON
@@ -328,7 +331,7 @@ public class GraphManager<String> {
         } else {
             return null;
         }
-    } */
+    }
 
     public Path GraphSearch(String src, String dst, Algorithm algo) {
         SearchAlgorithm searchAlgorithm = null;
