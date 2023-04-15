@@ -1,12 +1,6 @@
 package edu.asu.scai.rise;
 
-import com.kitfox.svg.A;
-
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Queue;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -44,9 +38,10 @@ public class Main {
 
 
         /*Merge conflict resolved check in again*/
-        graph.GraphSearch("a","d", Algorithm.BFS.ordinal());
-
-        graph.GraphSearch("b", "d", Algorithm.DFS.ordinal());
+        /* COMMENTING THIS SO THAT STRATEGY PATTERN CAN BE USED */
+//        graph.GraphSearch("a","d", Algorithm.BFS.ordinal());
+//
+//        graph.GraphSearch("b", "d", Algorithm.DFS.ordinal());
 
 
         /* PROJECT PART 3 */
@@ -64,6 +59,20 @@ public class Main {
 
         System.out.println("Step 3 DFS");
         graph.GraphSearch("b", "d", Algorithm.DFS);
+
+        System.out.println("Step 4 Random walk search using the input file provided in Assignment instructions");
+        graph.parseGraph("random-walk-input.dot");
+        graph.randomDFSSearch("a","c");
+
+        /* TEMPLATE PATTERN RANDOM WALK SEARCH*/
+        GraphTemplatePattern randomWalk = new RandomWalkTemplate();
+        System.out.println("Step 4 Random Walk Search with Template Pattern");
+        graph.parseGraph("random-walk-input.dot");
+        randomWalk.traverse(graph.map, "a", "c");
+
+        /* STRATEGY PATTERN RANDOM WALK SEARCH*/
+        System.out.println("Step 4 Random Walk Search with Strategy Pattern");
+        graph.GraphSearch("a", "c", Algorithm.RWS);
 
     }
 }

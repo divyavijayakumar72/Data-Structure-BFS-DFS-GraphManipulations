@@ -179,15 +179,18 @@ public class GraphManager<String> {
     private boolean dfsHelper(String src, String dest, Set<String> visited, List<String> path) {
         visited.add(src); // checking src node as visited
         path.add(src); // adding source node to path
+
         if (src != null && dest != null && src.equals(dest)) {
             return true;
         }
+
         for (String adj : getNeighbors(src)) {
             /* REFACTOR 5: Removing and/or combining 2 if-conditions to reduce lines of code */
                 if (!visited.contains(adj) && dfsHelper(adj, dest, visited, path)) {
                     return true;
                 }
         }
+        // when no neighbors this executes
         path.remove(path.size() - 1);
         return false;
     }
@@ -274,7 +277,8 @@ public class GraphManager<String> {
 
 
     /* PART 2 - BFS & DFS combined*/
-     public Path GraphSearch(String src, String dst, int value) {
+    /* COMMENTING THIS SO THAT STRATEGY PATTERN CAN BE USED */
+     /* public Path GraphSearch(String src, String dst, int value) {
         if (value == 0) {
             Map<String, String> path = new HashMap<>();
             Queue<String> queue = new LinkedList<>();
@@ -317,6 +321,7 @@ public class GraphManager<String> {
             // PART 2 - DFS
             Set<String> visited = new HashSet<>();
             List<String> path = new ArrayList<>();
+
             dfsHelper(src, dst, visited, path);
             Path path2 = new Path((List<java.lang.String>) path);
 
@@ -331,21 +336,64 @@ public class GraphManager<String> {
         } else {
             return null;
         }
-    }
+    } */
 
+    /* STEP 4 : STRATEGY PATTERN */
     public Path GraphSearch(String src, String dst, Algorithm algo) {
         SearchAlgorithm searchAlgorithm = null;
         if(algo == Algorithm.BFS) {
             searchAlgorithm = new BFSStrategy();
         } else if(algo == Algorithm.DFS) {
             searchAlgorithm = new DFSStrategy();
+        } else if(algo == Algorithm.RWS) {
+            searchAlgorithm = new RandomWalkStrategy();
         }
 
         if(searchAlgorithm == null) {
             return null;
-        }
-        else {
+        } else {
             return searchAlgorithm.search((java.lang.String) src, (java.lang.String) dst, map);
         }
+    }
+
+    /* STEP 4 : RANDOM WALK SEARCH */
+    public Path randomDFSSearch(String src, String dst) {
+        Set<String> visited = new HashSet<>();
+        List<String> res = new ArrayList<>();
+        randHelper(src, dst, visited, res);
+        Path path2 = new Path((List<java.lang.String>) res);
+
+        if(!path2.toString().equals("")) {
+            System.out.println("The random path is " + path2);
+            return path2;
+        } else {
+            System.out.println("No path found using random walk search.");
+            return null;
+        }
+    }
+
+    private boolean randHelper(String src, String dest, Set<String> visited, List<String> res) {
+        visited.add(src); // checking src node as visited
+        res.add(src); // adding source node to path
+
+        System.out.println("Visiting Path {nodes = " + res + "}");
+
+        Random random = new Random();
+        if (src != null && dest != null && src.equals(dest)) {
+            return true;
+        }
+
+        List<String> neighbors = getNeighbors(src);
+        Collections.shuffle(neighbors, random);
+
+        for (String adj : neighbors) {
+            /* REFACTOR 5: Removing and/or combining 2 if-conditions to reduce lines of code */
+            if (!visited.contains(adj) && randHelper(adj, dest, visited, res)) {
+                return true;
+            }
+        }
+        // when no neighbors this executes
+        res.remove(res.size() - 1);
+        return false;
     }
 }

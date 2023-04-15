@@ -15,7 +15,7 @@ public class BFSStrategy implements SearchAlgorithm {
 
         while (!queue.isEmpty()) { // while Q is not empty do
             String curr = queue.poll(); // curr := Q.dequeue()
-            if (curr != null && dst != null && curr.equals(dst)) { // if curr is the destination then - COMMON
+            if (curr != null && dst != null && curr.equals(dst)) { // if curr is the destination then
 
                 // found the destination node, backtrack to construct the path
                 List<String> result = new ArrayList<>();
@@ -26,7 +26,7 @@ public class BFSStrategy implements SearchAlgorithm {
                 }
                 result.add(src);
                 Collections.reverse(result);
-                Path path1 = new Path((List<String>) result); //COMMON
+                Path path1 = new Path((List<String>) result);
                 System.out.println("The BFS path using Strategy pattern is " +  path1);
                 return path1;
             }

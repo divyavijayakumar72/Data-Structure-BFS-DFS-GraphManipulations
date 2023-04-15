@@ -9,7 +9,7 @@ public class DFS extends GraphTemplatePattern {
     private boolean found;
 
     @Override
-    protected void traverseHelperFunc(Map<String, List<String>> map, Queue<String> queue, String node, String destination, Map<String, String> parentMap) {
+    protected void traverseHelperFunc(Map<String, List<String>> map, Queue<String> queue, String node, String destination, Map<String, String> parentMap, List<String> res) {
         visited.add(node);
 
         if(node.equals(destination)) {
@@ -22,7 +22,7 @@ public class DFS extends GraphTemplatePattern {
         for (String neighbor : neighbors) {
             if (!visited.contains(neighbor) && !found) {
                 parentMap.put(neighbor, node);
-                traverseHelperFunc(map, queue, neighbor, destination, parentMap);
+                traverseHelperFunc(map, queue, neighbor, destination, parentMap, res);
             }
         }
 

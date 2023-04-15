@@ -4,7 +4,7 @@ import java.util.*;
 
 public class BFS extends GraphTemplatePattern {
     @Override
-    protected void traverseHelperFunc(Map<String, List<String>> map, Queue<String> queue, String src, String dst, Map<String, String> parentMap) {
+    protected void traverseHelperFunc(Map<String, List<String>> map, Queue<String> queue, String src, String dst, Map<String, String> parentMap, List<String> res) {
         visited.add(src);
         queue.add(src);
 
