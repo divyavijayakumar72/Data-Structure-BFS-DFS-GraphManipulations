@@ -46,7 +46,7 @@ public class Main {
         /*Merge conflict resolved check in again*/
 //        System.out.println("Algorithm.BFS.ordinal(): " + Algorithm.BFS.ordinal());
 //        graph.GraphSearch("a","d", Algorithm.BFS.ordinal());
-//
+        
 //        System.out.println("Algorithm.BFS.ordinal() : " + Algorithm.DFS.ordinal());
 //        graph.GraphSearch("b", "d", Algorithm.DFS.ordinal());
 
@@ -54,10 +54,18 @@ public class Main {
         /* PROJECT PART 3 */
 
         GraphTemplatePattern bfs = new BFS();
+        System.out.println("Step 2 BFS");
         bfs.traverse(graph.map, "a", "d");
 
         GraphTemplatePattern dfs = new DFS();
+        System.out.println("Step 2 DFS");
         dfs.traverse(graph.map, "b", "d");
+
+        System.out.println("Step 3 BFS");
+        graph.GraphSearch("a", "d", Algorithm.BFS);
+
+        System.out.println("Step 3 DFS");
+        graph.GraphSearch("b", "d", Algorithm.DFS);
 
     }
 }

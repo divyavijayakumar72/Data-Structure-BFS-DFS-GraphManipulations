@@ -21,7 +21,7 @@ public class GraphManager<String> {
     MutableGraph mg;
     MutableGraph newGraph;
 
-    Map<String, List<String>> map = new HashMap<>(); // removing private
+    Map<java.lang.String, List<java.lang.String>> map = new HashMap<>(); // removing private
     Map<String, String> edgeDirection = new HashMap<>();
     Map<String, String> m = new HashMap<>();
 
@@ -66,12 +66,12 @@ public class GraphManager<String> {
             addNode(srcLabel);
             addNode(dstLabel);
 
-        map.get(srcLabel).add(dstLabel);
+        map.get(srcLabel).add((java.lang.String) dstLabel);
 
         /* REFACTOR 3: change from for loop to foreach loop (line 78) to improve performance and simplicity of code */
-        for(String key: map.keySet()) {
-            for (String value : map.get(key)) {
-                addKeyValue(m, key, value);
+        for(java.lang.String key: map.keySet()) {
+            for (java.lang.String value : map.get(key)) {
+                addKeyValue((Map) m, (String) key, (String) value);
             }
         }
 
@@ -86,8 +86,8 @@ public class GraphManager<String> {
     // GET ALL NODES
     public ArrayList<String> getLabel() {
         ArrayList<String> arrList = new ArrayList<>();
-        for(String data: map.keySet()) {
-            arrList.add(data);
+        for(java.lang.String data: map.keySet()) {
+            arrList.add((String) data);
         }
 //        System.out.println("Nodes list " + arrList);
         return arrList;
@@ -95,7 +95,7 @@ public class GraphManager<String> {
 
     public int countEdges() {
         int count = 0;
-        for (String v : map.keySet()) {
+        for (java.lang.String v : map.keySet()) {
             count += map.get(v).size();
         }
 //        System.out.println("edges count " + count);
@@ -105,10 +105,10 @@ public class GraphManager<String> {
     // GET NEIGHBORS
     public Map<String, String> getEdgeDirection() {
         /* REFACTOR 3: change from for loop to foreach loop (line 115) to improve performance and simplicity of code */
-        for(String key: map.keySet()) {
+        for(java.lang.String key: map.keySet()) {
             if(!map.get(key).equals("[]")) {
-                for(String value : map.get(key)) {
-                    edgeDirection.putIfAbsent(key, value);
+                for(java.lang.String value : map.get(key)) {
+                    edgeDirection.putIfAbsent((String) key, (String) value);
                 }
             }
         }
@@ -138,10 +138,10 @@ public class GraphManager<String> {
     public MutableGraph convertMapToGraph() {
         MutableGraph g = mutGraph().setDirected(true);
 
-        for (Map.Entry<String, List<String>> entry : map.entrySet()) {
-            String from = entry.getKey();
+        for (Map.Entry<java.lang.String, List<java.lang.String>> entry : map.entrySet()) {
+            String from = (String) entry.getKey();
             g.add(mutNode((java.lang.String) from));
-            for (String to : entry.getValue()) {
+            for (java.lang.String to : entry.getValue()) {
                 g.add(mutNode((java.lang.String) from).addLink(mutNode((java.lang.String) to)));
             }
         }
@@ -152,17 +152,17 @@ public class GraphManager<String> {
     /* FEATURE 1 */
 
     /* FEATURE 2 */
-    public Map<String, List<String>> addNode(String label) {
+    public Map<java.lang.String, List<java.lang.String>> addNode(String label) {
         if(!map.containsKey(label)) {
-            map.put(label, new LinkedList<String>());
+            map.put((java.lang.String) label, (List<java.lang.String>) new LinkedList<String>());
         }
         return map;
     }
 
-    public Map<String, List<String>> addNodes(String[] label) {
+    public Map<java.lang.String, List<java.lang.String>> addNodes(String[] label) {
         for(String val: label) {
             if(!map.containsKey(val)) {
-                map.put(val, new LinkedList<String>());
+                map.put((java.lang.String) val, (List<java.lang.String>) new LinkedList<String>());
             }
         }
         return map;
@@ -190,12 +190,12 @@ public class GraphManager<String> {
         return false;
     }
 
-    public Map<String, List<String>> removeNode(String label) {
+    public Map<java.lang.String, List<java.lang.String>> removeNode(String label) {
         if(map.containsKey(label)) {
             map.remove(label);
         }
 
-        for(String key: map.keySet()) {
+        for(java.lang.String key: map.keySet()) {
             if(map.get(key).contains(label)) {
                 map.get(key).remove(label);
             }
@@ -203,14 +203,14 @@ public class GraphManager<String> {
         return map;
     }
 
-    public Map<String, List<String>> removeNodes(String[] label) {
+    public Map<java.lang.String, List<java.lang.String>> removeNodes(String[] label) {
         for(String val: label) {
             if(map.containsKey(val)) {
                 map.remove(val);
             }
         }
 
-        for(String key: map.keySet()) {
+        for(java.lang.String key: map.keySet()) {
             if(map.get(key).contains(label)) {
                 map.get(key).remove(label);
             }
@@ -220,14 +220,14 @@ public class GraphManager<String> {
     /* FEATURE 2 */
 
     /* FEATURE 3 */
-    public Map<String, List<String>> addEdge(String srcLabel, String dstLabel) {
+    public Map<java.lang.String, List<java.lang.String>> addEdge(String srcLabel, String dstLabel) {
         addEdgeFromFile(srcLabel, dstLabel);
         map.remove(dstLabel);
         return map;
     }
 
-    public Map<String, List<String>> removeEdge(String source, String destination) {
-        for(String val: map.get(source)) {
+    public Map<java.lang.String, List<java.lang.String>> removeEdge(String source, String destination) {
+        for(java.lang.String val: map.get(source)) {
             map.remove(source);
             addNode(source);
             addNode(destination);
@@ -270,7 +270,7 @@ public class GraphManager<String> {
 
 
     /* PART 2 - BFS & DFS combined*/
-    public Path GraphSearch(String src, String dst, int value) {
+    /* public Path GraphSearch(String src, String dst, int value) {
         if (value == 0) {
             Map<String, String> path = new HashMap<>();
             Queue<String> queue = new LinkedList<>();
@@ -311,7 +311,7 @@ public class GraphManager<String> {
             System.out.println("No path found using BFS approach");
             return null;
         } else if (value == 1){
-            /* PART 2 - DFS */
+            // PART 2 - DFS
             Set<String> visited = new HashSet<>();
             List<String> path = new ArrayList<>();
             dfsHelper(src, dst, visited, path);
@@ -327,6 +327,22 @@ public class GraphManager<String> {
 
         } else {
             return null;
+        }
+    } */
+
+    public Path GraphSearch(String src, String dst, Algorithm algo) {
+        SearchAlgorithm searchAlgorithm = null;
+        if(algo == Algorithm.BFS) {
+            searchAlgorithm = new BFSStrategy();
+        } else if(algo == Algorithm.DFS) {
+            searchAlgorithm = new DFSStrategy();
+        }
+
+        if(searchAlgorithm == null) {
+            return null;
+        }
+        else {
+            return searchAlgorithm.search((java.lang.String) src, (java.lang.String) dst, map);
         }
     }
 }
