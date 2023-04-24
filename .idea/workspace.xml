@@ -6,10 +6,25 @@
   <component name="ChangeListManager">
     <list default="true" id="8fc57f38-5730-47bc-a382-3bc5833b2e5a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/7/2718ddf5f8e8557be93096e2b61cff9bfc0e239f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/2/f2d058a47f1210511898af293a2be52094471b41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/7/2718ddf5f8e8557be93096e2b61cff9bfc0e239f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/2/f2d058a47f1210511898af293a2be52094471b41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.dot" beforeDir="false" afterPath="$PROJECT_DIR$/output.dot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/Algorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/Algorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/BFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/BFSStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/BFSStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/DFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/DFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/DFSStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/DFSStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/GraphManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/GraphManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/GraphTemplatePattern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/GraphTemplatePattern.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/SearchAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu.asu.scai.rise/SearchAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/asu/scai/rise/GraphManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/asu/scai/rise/GraphManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/asu/scai/rise/GraphTemplatePattern.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/asu/scai/rise/GraphTemplatePattern.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/asu/scai/rise/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/asu/scai/rise/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
@@ -21,6 +36,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -37,12 +53,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
-    &quot;keyToString&quot;: {
+  &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/divya/OneDrive/Desktop/CSE 464/finalproj/CSE_464_2023&quot;
-    }
-    }</component>
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/divya/OneDrive/Desktop/CSE 464/Design Patterns (1)&quot;
+  }
+}</component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn package" />
