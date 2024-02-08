@@ -1,4 +1,4 @@
-# CSE_464_2023
+# Conversion of a DOT file to a graph object and performing graph manipulations on it
 
 **GitHub Repo Link: https://github.com/divyavijayakumar72/CSE_464_2023**
 
